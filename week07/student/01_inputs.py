@@ -12,11 +12,11 @@
 # ============================================================
 
 # 將Streamlit簡稱為st；下方st.xxx用來建立網頁元件或存取狀態。
-import streamlit as st
+import streamlit as st  # type: ignore[reportMissingImports]
 
 # ---------- 1. 畫面標題與用途 ----------
 # TODO A：修改標題與說明，先看見一個可以操作的畫面。
-st.title("TODO：填入你的App標題")  # st.title顯示頁面的主標題。
+st.title("我的第一個活動工具")  # st.title顯示頁面的主標題。
 # st.write把文字或變數的值顯示到網頁；本身不會保存資料或呼叫模型。
 st.write("輸入稱呼，按送出才顯示問候；本例不呼叫API。")
 

@@ -38,7 +38,7 @@ if st.button("加一"):
 # B只處理保存的次數；不新增函式或第二份狀態。
 # st.button建立按鈕；只有點擊當次回傳True，其餘重新執行為False，供下方if判斷。
 if st.button("歸零"):
-    st.info("TODO B：把session_state中的count改為0。")  # st.info顯示練習提示框；提示本身不會修改狀態。
+    st.session_state.count = 0
 
 
 # ---------- 4. 顯示對照結果 ----------
