@@ -76,7 +76,12 @@ def start(server, key=FAKE_KEY):
     env = {k: v for k, v in os.environ.items() if k != "OPENAI_API_KEY"}
     if key:
         env["OPENAI_API_KEY"] = key
-    patches = [mock.patch.dict(os.environ, env, clear=True), mock.patch("openai.OpenAI", client)]
+    # 不讀本機 .env，測試結果才不受自己是否放了真金鑰影響。
+    patches = [
+        mock.patch.dict(os.environ, env, clear=True),
+        mock.patch("openai.OpenAI", client),
+        mock.patch("dotenv.load_dotenv", lambda *args, **kwargs: False),
+    ]
     for patch in patches:
         patch.start()
     at = AppTest.from_file(APP, default_timeout=30).run()

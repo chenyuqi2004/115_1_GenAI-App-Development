@@ -2,3 +2,5 @@
 streamlit==1.63.0
 openai==2.49.0
 python-dotenv==1.2.3
+# 期中專題（Midterm Mini-Project）採 Pydantic 路線。
+pydantic==2.14.1

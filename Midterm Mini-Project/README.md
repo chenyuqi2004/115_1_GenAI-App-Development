@@ -24,7 +24,7 @@
 # macOS／Linux
 python3.14 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements.txt
+python -m pip install -r ../requirements.txt
 python -m pip check
 cp .env.example .env
 python -m streamlit run app.py
@@ -34,11 +34,13 @@ python -m streamlit run app.py
 # Windows
 py -3.14 -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
+python -m pip install -r ..\requirements.txt
 python -m pip check
 Copy-Item .env.example .env
 python -m streamlit run app.py
 ```
+
+套件清單放在 Repo 根目錄的 `requirements.txt`，不放在本資料夾。Streamlit Community Cloud 安裝入口同層的清單時，會把資料夾名稱中的空格拆開而安裝失敗（`Invalid requirement: 'Mini-Project/requirements.txt'`）；說明書第 3-1 節也允許放在 Repo 根目錄。
 
 ## 設定方式
 
