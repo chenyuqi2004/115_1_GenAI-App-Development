@@ -2,8 +2,8 @@
 
 比對職缺描述與自己的技能簡述，整理出已符合、待補強和還需要確認的項目，再給出投遞建議。
 
-- **App 網址：** 待填（尚未部署）
-- **雲端驗收：** 未測
+- **App 網址：** https://a113221008-job-fit-analyzer.streamlit.app/
+- **雲端驗收：** 2026-11-07 已取得正常與資訊不足各一筆真實 API 結果；人工核對與老師可開啟確認待完成
 - **部署設定：** Repo `chenyuqi2004/115_1_GenAI-App-Development`、分支 `main`、Main file path `Midterm Mini-Project/app.py`
 
 ## 使用者與問題
@@ -84,10 +84,10 @@ Secrets 優先於環境變數。雲端格式參考 `.streamlit/secrets.example.t
 |---|---|
 | 輸入檢查、API 開關、結果保存與清除、錯誤分流 | 離線測試通過（2026-11-07，macOS／Python 3.14.10，模擬 HTTP） |
 | App 在本機啟動 | 已確認（2026-11-07，只確認服務啟動，未以真人瀏覽器操作） |
-| 真實 API：正常資料 | 未測 |
-| 真實 API：資訊不足 | 未測 |
-| 真人瀏覽器操作 | 未測 |
-| Streamlit Community Cloud 部署 | 未測 |
+| 真實 API：正常資料 | 已在 Cloud 取得結果（2026-11-07），人工核對待完成 |
+| 真實 API：資訊不足 | 已在 Cloud 取得結果（2026-11-07），人工核對待完成 |
+| 真人瀏覽器操作 | 已在 Cloud 操作缺金鑰與案例 A、B；其餘檢查項目未測 |
+| Streamlit Community Cloud 部署 | 已上線；老師可開啟待確認 |
 
 離線測試不連線、不計費，只證明程式流程，不代表模型輸出的品質。重新執行：
 
